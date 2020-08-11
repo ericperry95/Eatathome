@@ -1,0 +1,395 @@
+/* 
+Eat at Home (project 1)
+Author: Eric Perry
+Date: 8/5/20
+*/
+/* 
+font-family: 'Balsamiq Sans', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Indie Flower', cursive;
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* background for home page */
+body.home {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  background-image: url("cooking1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* background for about page */
+body.about {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  background-image: url("cutting1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* background for recipes page */
+body.recipes {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  background-image: url("cutting2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* background for contact page */
+
+body.contact {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+/* nav bar styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  color: white;
+}
+
+.brand-title a {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin: .5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: lightgrey;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* home page title */
+h1.home {
+  padding-top: 40px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 85px;
+  color: white;
+  text-shadow: 4px 4px black;   
+}
+
+/* about page title */
+h1.about {
+  padding-top: 20px;
+  padding-left: 85px;
+  text-align: left;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 55px;
+  color: white;
+  text-shadow: 4px 4px black;
+}
+
+/* recipes page title */
+h1.recipes {
+  padding-top: 10px;
+  padding-left: 85px;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+h1.contact {
+  padding-top: 35px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+h2.home {
+  text-align: center;
+  font-size: 45px;
+  text-shadow: 3px 2px white;
+  font-family: 'Indie Flower', cursive;
+}
+
+h2.recipes {
+  text-align: center;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 55px;
+  text-shadow: 2px 2px white;
+}
+
+/* buttons to choose dish */
+
+div.chicken {
+  float: left;
+  padding-left: 55px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+div.beef{
+  float:left;
+  padding-left: 55px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+div.vegan {
+  float: left;
+  padding-left: 55px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 70px; 
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+div.fish {
+  float: left;
+  padding-left: 55px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+div.chicken:hover {
+  color: black;
+  cursor:pointer;
+  text-shadow: 2px 2px white;
+}
+
+div.beef:hover {
+  color: black;
+  cursor:pointer;
+  text-shadow: 2px 2px white;
+}
+
+div.vegan:hover {
+  color: black;
+  cursor: pointer;
+  text-shadow: 2px 2px white;
+}
+
+div.fish:hover {
+  color: black;
+  cursor: pointer;
+  text-shadow: 2px 2px white;
+}
+
+/* recipes */
+
+div#chicken-recipe {
+  float: left;
+  padding-left: 55px;
+  padding-right: 55px;
+  font-family: 'Balsamiq Sans', cursive;
+  color: white;
+  text-shadow: 2px 2px black;
+  display: none;
+}
+
+div#beef-recipe{
+  float: left;
+  padding-left: 55px;
+  padding-right: 55px;
+  font-family: 'Balsamiq Sans', cursive;
+  color: white;
+  text-shadow: 2px 2px black;
+  display: none;
+}
+
+div#vegan-recipe {
+  float: left;
+  padding-left: 55px;
+  padding-right: 55px;
+  font-family: 'Balsamiq Sans', cursive;
+  color: white;
+  text-shadow: 2px 2px black;
+  display: none;
+}
+
+div#fish-recipe {
+  float: left;
+  padding-left: 55px;
+  padding-right: 55px;
+  font-family: 'Balsamiq Sans', cursive;
+  color: white;
+  text-shadow: 2px 2px black;
+  display: none;
+}
+
+/* refresh button */
+
+button {
+  display: block;
+}
+
+/* copyright symbol sizing */
+small {
+  font-size: 45%;
+}
+
+/*about page text */
+
+p#about {
+  padding-left: 55px;
+  padding-right: 55px;
+  color: black;
+  font-size: 25px;
+  text-shadow: 2px 2px white;
+}
+
+/* form styling */
+
+form { 
+  max-width:420px; 
+  margin:50px auto; 
+  background-color: white
+}
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { 
+  border:2px solid #CC4949; 
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color: white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+[type="submit"]:hover { 
+  background:#CC4949; 
+}
+
+/* media query to add responsivness */
+
+@media screen and (max-width: 850px) {
+  h2.home {
+    display: none;
+  }
+
+  h1.home {
+    font-size: 55px;
+    padding-top: 60px;
+  }
+
+  h1.recipes {
+    display: none;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+   display: none;
+   width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+
+
